@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AMANAH COMPUTER — Penjualan, Tukar Tambah, Service &amp; Spare Part Laptop Istana BEC Bandung</title>
+  <meta
+    name="description"
+    content="Profil toko AMANAH COMPUTER di Istana BEC Lantai 1 Blok W-12, Bandung. Layanan penjualan laptop, tukar tambah, service hardware & software, serta spare part terpercaya. Hubungi WhatsApp 085795151998."
+  />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              bg: '#060B16',
+              band: '#0A1222',
+              card: '#0E182D',
+              blue: '#2563EB',
+              cyan: '#38BDF8',
+            },
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    /* Latar navigasi transparan lembut dan pencahayaan aksen biru teknologi */
+    .topbar-glass {
+      background: rgba(6, 11, 22, 0.86);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .hero-surface {
+      background:
+        radial-gradient(circle at 85% 20%, rgba(37, 99, 235, 0.2), rgba(56, 189, 248, 0.07) 42%, transparent 72%),
+        #060B16;
+    }
+
+    /* Bingkai gelap agar data URI JPEG monogram logam A di atas C menyatu rapi */
+    .logo-frame {
+      background-color: #050811;
+      box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.22);
+    }
+
+    .logo-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: contrast(1.06);
+    }
+  </style>
+</head>
+<body class="bg-[#060B16] text-slate-100 font-sans antialiased selection:bg-[#2563EB] selection:text-white overflow-x-hidden">
+
+  <!-- ==================== 1. HEADER NAVIGASI ==================== -->
+  <header class="fixed top-0 inset-x-0 z-40 topbar-glass border-b border-slate-800/80">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 sm:h-18 py-3">
+        <!-- Logo & Identitas Toko -->
+        <a href="#top" class="flex items-center gap-3 group" aria-label="Beranda AMANAH COMPUTER">
+          <div class="w-10 h-10 rounded-xl logo-frame border border-slate-700/80 group-hover:border-[#38BDF8]/70 overflow-hidden shrink-0 transition-colors">
+            <img
+              class="ac-brand-logo"
+              src=""
+              alt="Logo AMANAH COMPUTER"
+            />
+          </div>
+          <div>
+            <span class="block text-sm sm:text-base font-extrabold tracking-tight text-white leading-none">
+              AMANAH <span class="text-[#38BDF8]">COMPUTER</span>
+            </span>
+            <span class="block text-[11px] font-medium text-slate-400 mt-0.5">
+              Istana BEC Lt. 1 Blok W-12
+            </span>
+          </div>
+        </a>
+
+        <!-- Tautan Navigasi Desktop -->
+        <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-300" aria-label="Navigasi Utama">
+          <a href="#tentang" class="hover:text-[#38BDF8] transition-colors">Tentang</a>
+          <a href="#layanan" class="hover:text-[#38BDF8] transition-colors">Layanan</a>
+          <a href="#lokasi" class="hover:text-[#38BDF8] transition-colors">Lokasi</a>
+        </nav>
+
+        <!-- Aksi Header: WhatsApp & Menu Mobile -->
+        <div class="flex items-center gap-2.5">
+          <a
+            href="https://wa.me/6285795151998"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#2563EB] hover:bg-blue-500 text-white text-xs sm:text-sm font-semibold shadow-md shadow-blue-600/20 transition-all"
+          >
+            <span>WhatsApp</span>
+          </a>
+
+          <button
+            id="mobile-menu-trigger"
+            type="button"
+            aria-expanded="false"
+            aria-controls="mobile-menu-panel"
+            aria-label="Buka atau tutup menu navigasi"
+            class="md:hidden p-2.5 rounded-xl bg-[#0E182D] border border-slate-800 text-slate-200 hover:border-slate-700 hover:text-white transition-colors"
+          >
+            <svg id="icon-hamburger" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg id="icon-close" class="w-5 h-5 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Menu Navigasi Mobile -->
+      <div id="mobile-menu-panel" class="hidden md:hidden pb-4 pt-2 border-t border-slate-800/80 space-y-1">
+        <a href="#tentang" class="mobile-nav-item block px-3.5 py-2.5 rounded-xl text-sm font-medium text-slate-200 hover:bg-slate-800/70">Tentang</a>
+        <a href="#layanan" class="mobile-nav-item block px-3.5 py-2.5 rounded-xl text-sm font-medium text-slate-200 hover:bg-slate-800/70">Layanan</a>
+        <a href="#lokasi" class="mobile-nav-item block px-3.5 py-2.5 rounded-xl text-sm font-medium text-slate-200 hover:bg-slate-800/70">Lokasi</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ==================== 2. HERO SECTION ==================== -->
+    <section class="pt-28 pb-16 sm:pt-36 sm:pb-24 hero-surface border-b border-slate-800/70">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+          <!-- Ringkasan Profil Konter -->
+          <div class="lg:col-span-7 space-y-6">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0E182D] border border-[#2563EB]/40 text-[#38BDF8] text-xs sm:text-sm font-medium">
+              <span class="w-2 h-2 rounded-full bg-[#38BDF8]"></span>
+              Istana BEC Lantai 1 Blok W-12, Bandung
+            </div>
+
+            <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-[1.15]">
+              AMANAH COMPUTER — Profil &amp; Layanan <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#2563EB] to-[#38BDF8]">Laptop</span> di Bandung
+            </h1>
+
+            <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl">
+              Konter layanan laptop di Istana BEC Lantai 1 Blok W-12, Bandung yang melayani penjualan unit, tukar tambah, service hardware dan software, serta penyediaan spare part dengan pengecekan terbuka.
+            </p>
+
+            <div class="flex flex-wrap gap-3.5 pt-1">
+              <a
+                href="https://wa.me/6285795151998"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#2563EB] hover:bg-blue-500 text-white font-semibold text-sm sm:text-base shadow-lg shadow-blue-600/25 transition-all"
+              >
+                <span>Chat WhatsApp</span>
+              </a>
+
+              <a
+                href="https://maps.app.goo.gl/PCabt8RW2VkDqCqTA?g_st=ac"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#0E182D] hover:bg-slate-800 text-white border border-slate-700 hover:border-[#38BDF8]/60 font-semibold text-sm sm:text-base transition-all"
+              >
+                <span>Buka Google Maps</span>
+              </a>
+
+              <!-- Ganti 'Katalog Laptop' pada href dan teks tampilan di bawah jika username Instagram berbeda -->
+              <a
+                href="https://www.instagram.com/amanahcomputer.bdg/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-[#38BDF8]/10 hover:bg-[#38BDF8]/20 text-slate-100 border border-[#38BDF8]/35 hover:border-[#38BDF8] font-semibold text-sm sm:text-base transition-all"
+              >
+                <svg class="w-4 h-4 text-[#38BDF8] shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+                <span>Katalog Laptop</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Kartu Profil Singkat di Sisi Kanan -->
+          <div class="lg:col-span-5">
+            <div class="rounded-2xl bg-[#0E182D] border border-slate-800 p-6 sm:p-7 space-y-6 shadow-xl">
+              <div class="flex items-center gap-4 pb-5 border-b border-slate-800">
+                <div class="w-16 h-16 rounded-2xl logo-frame border border-[#2563EB]/45 overflow-hidden shrink-0">
+                  <img
+                    class="ac-brand-logo"
+                    src=""
+                    alt="Monogram Logam AMANAH COMPUTER"
+                  />
+                </div>
+                <div>
+                  <span class="inline-block px-2.5 py-0.5 rounded-md bg-[#2563EB]/20 border border-[#2563EB]/40 text-[#38BDF8] text-[11px] font-bold tracking-wider uppercase">
+                    PROFIL KONTER
+                  </span>
+                  <h2 class="text-xl font-extrabold text-white mt-1">AMANAH COMPUTER</h2>
+                  <p class="text-xs sm:text-sm text-slate-400">Istana BEC Lantai 1 Blok W-12, Bandung</p>
+                </div>
+              </div>
+
+              <ul class="space-y-3 text-xs sm:text-sm text-slate-300">
+                <li class="flex items-start gap-3">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#38BDF8] mt-2 shrink-0"></span>
+                  <span>Pengecekan kondisi unit dilakukan secara terbuka sebelum serah terima.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#38BDF8] mt-2 shrink-0"></span>
+                  <span>Melayani penjualan laptop, tukar tambah, service hardware &amp; software, serta spare part.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#38BDF8] mt-2 shrink-0"></span>
+                  <span>Kunjungan langsung ke lokasi dan opsi COD area Bandung sesuai kesepakatan.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 3. TENTANG TOKO ==================== -->
+    <section id="tentang" class="py-16 sm:py-24 bg-[#0A1222] border-b border-slate-800/70">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+          <!-- Deskripsi Profil & Transparansi -->
+          <div class="lg:col-span-7 space-y-5">
+            <span class="text-xs font-bold uppercase tracking-widest text-[#38BDF8]">Tentang Toko</span>
+            <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
+              Transparansi Pengecekan Unit &amp; Kenyamanan Transaksi
+            </h2>
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+              AMANAH COMPUTER hadir di Istana BEC Lantai 1 Blok W-12, Bandung sebagai konter layanan laptop yang mengutamakan kejelasan informasi dan ketenangan saat bertransaksi. Setiap pertanyaan mengenai kondisi unit, kebutuhan pemakaian, maupun langkah perbaikan dijelaskan secara lugas.
+            </p>
+            <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+              Kami menekankan pengecekan unit sebelum serah terima agar kondisi perangkat, kelengkapan, serta hasil pengerjaan dipastikan bersama terlebih dahulu, sehingga proses jual beli, tukar tambah, dan servis berjalan tertib dan nyaman.
+            </p>
+          </div>
+
+          <!-- Daftar Merek Umum yang Ditangani -->
+          <div class="lg:col-span-5">
+            <div class="rounded-2xl bg-[#0E182D] border border-slate-800 p-6 sm:p-7 space-y-4">
+              <div>
+                <span class="text-xs font-semibold uppercase tracking-wider text-[#38BDF8]">Merek Umum</span>
+                <h3 class="text-lg sm:text-xl font-bold text-white mt-1">
+                  Merek Laptop yang Umum Ditangani
+                </h3>
+              </div>
+
+              <div class="grid grid-cols-2 gap-2.5">
+                <div class="px-3.5 py-2.5 rounded-xl bg-[#0A1222] border border-slate-800 text-sm font-semibold text-white">ASUS</div>
+                <div class="px-3.5 py-2.5 rounded-xl bg-[#0A1222] border border-slate-800 text-sm font-semibold text-white">Lenovo ThinkPad</div>
+                <div class="px-3.5 py-2.5 rounded-xl bg-[#0A1222] border border-slate-800 text-sm font-semibold text-white">Apple MacBook</div>
+                <div class="px-3.5 py-2.5 rounded-xl bg-[#0A1222] border border-slate-800 text-sm font-semibold text-white">Acer</div>
+                <div class="px-3.5 py-2.5 rounded-xl bg-[#0A1222] border border-slate-800 text-sm font-semibold text-white">HP</div>
+                <div class="px-3.5 py-2.5 rounded-xl bg-[#0A1222] border border-slate-800 text-sm font-semibold text-white">Dell</div>
+                <div class="px-3.5 py-2.5 rounded-xl bg-[#0A1222] border border-slate-800 text-sm font-semibold text-white">MSI</div>
+                <div class="px-3.5 py-2.5 rounded-xl bg-[#0A1222] border border-slate-800 text-sm font-semibold text-white">Axioo</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 4. LAYANAN UTAMA ==================== -->
+    <section id="layanan" class="py-16 sm:py-24 bg-[#060B16] border-b border-slate-800/70">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-2xl mb-12">
+          <span class="text-xs font-bold uppercase tracking-widest text-[#38BDF8]">Layanan Utama</span>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-white mt-2 tracking-tight">
+            Layanan yang Kami Kerjakan
+          </h2>
+          <p class="text-slate-400 text-sm sm:text-base mt-2.5 leading-relaxed">
+            Empat layanan utama dengan alur konsultasi dan pengecekan unit yang terstruktur.
+          </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Kartu 1: Penjualan Laptop -->
+          <article class="rounded-2xl bg-[#0E182D] border border-slate-800 hover:border-[#2563EB]/70 p-6 transition-colors flex flex-col justify-between space-y-4">
+            <div class="space-y-3">
+              <div class="w-10 h-10 rounded-xl bg-[#2563EB]/15 border border-[#2563EB]/30 text-[#38BDF8] flex items-center justify-center font-bold text-sm">
+                01
+              </div>
+              <h3 class="text-lg font-bold text-white leading-snug">Penjualan Laptop</h3>
+              <p class="text-sm text-slate-300 leading-relaxed">
+                Penyediaan unit laptop untuk kebutuhan harian, kuliah, kerja, maupun kreatif dengan pengecekan unit sebelum serah terima.
+              </p>
+            </div>
+          </article>
+
+          <!-- Kartu 2: Tukar Tambah -->
+          <article class="rounded-2xl bg-[#0E182D] border border-slate-800 hover:border-[#2563EB]/70 p-6 transition-colors flex flex-col justify-between space-y-4">
+            <div class="space-y-3">
+              <div class="w-10 h-10 rounded-xl bg-[#2563EB]/15 border border-[#2563EB]/30 text-[#38BDF8] flex items-center justify-center font-bold text-sm">
+                02
+              </div>
+              <h3 class="text-lg font-bold text-white leading-snug">Tukar Tambah</h3>
+              <p class="text-sm text-slate-300 leading-relaxed">
+                Penukaran unit lama ke perangkat lain sesuai kebutuhan dengan penilaian kondisi fisik, fungsi, dan kelengkapan yang jelas.
+              </p>
+            </div>
+          </article>
+
+          <!-- Kartu 3: Service Hardware & Software -->
+          <article class="rounded-2xl bg-[#0E182D] border border-slate-800 hover:border-[#2563EB]/70 p-6 transition-colors flex flex-col justify-between space-y-4">
+            <div class="space-y-3">
+              <div class="w-10 h-10 rounded-xl bg-[#2563EB]/15 border border-[#2563EB]/30 text-[#38BDF8] flex items-center justify-center font-bold text-sm">
+                03
+              </div>
+              <h3 class="text-lg font-bold text-white leading-snug">Service Hardware &amp; Software</h3>
+              <p class="text-sm text-slate-300 leading-relaxed">
+                Penanganan sistem operasi, aplikasi, perawatan perangkat, dan perbaikan komponen laptop sesuai hasil pemeriksaan awal.
+              </p>
+            </div>
+          </article>
+
+          <!-- Kartu 4: Spare Part -->
+          <article class="rounded-2xl bg-[#0E182D] border border-slate-800 hover:border-[#2563EB]/70 p-6 transition-colors flex flex-col justify-between space-y-4">
+            <div class="space-y-3">
+              <div class="w-10 h-10 rounded-xl bg-[#2563EB]/15 border border-[#2563EB]/30 text-[#38BDF8] flex items-center justify-center font-bold text-sm">
+                04
+              </div>
+              <h3 class="text-lg font-bold text-white leading-snug">Spare Part</h3>
+              <p class="text-sm text-slate-300 leading-relaxed">
+                Penyediaan serta pemasangan komponen pengganti dan peningkatan performa perangkat sesuai kecocokan tipe laptop.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 5. LOKASI & KONTAK ==================== -->
+    <section id="lokasi" class="py-16 sm:py-24 bg-[#0A1222]">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="rounded-3xl bg-[#0E182D] border border-slate-800 p-6 sm:p-10 shadow-xl">
+          <div class="grid lg:grid-cols-12 gap-8 items-stretch">
+            <!-- Informasi Alamat & COD Area Bandung -->
+            <div class="lg:col-span-7 space-y-5 flex flex-col justify-between">
+              <div class="space-y-4">
+                <span class="text-xs font-bold uppercase tracking-widest text-[#38BDF8]">Lokasi &amp; Kontak</span>
+                <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
+                  Istana BEC Lantai 1 Blok W-12, Bandung
+                </h2>
+                <p class="text-sm sm:text-base text-slate-300 leading-relaxed">
+                  <strong>Alamat:</strong> Istana BEC Lantai 1 Blok W-12, Jl. Purnawarman No. 13–15, Babakan Ciamis, Kec. Sumur Bandung, Kota Bandung, Jawa Barat.
+                </p>
+                <p class="text-sm text-slate-400 leading-relaxed">
+                  <strong>Opsi COD Area Bandung:</strong> Selain kunjungan langsung ke lokasi, koordinasi COD di area Bandung dapat diatur sesuai kesepakatan waktu dengan tetap mengutamakan pengecekan unit sebelum serah terima.
+                </p>
+              </div>
+
+              <div class="flex flex-wrap gap-3 pt-2">
+                <a
+                  href="https://maps.app.goo.gl/PCabt8RW2VkDqCqTA?g_st=ac"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-[#0A1222] hover:bg-slate-800 text-white border border-slate-700 text-sm font-semibold transition-colors"
+                >
+                  <span>Buka Google Maps</span>
+                </a>
+
+                <!-- Ganti 'amanahcomputer.bdg' pada href dan teks tampilan di bawah jika username Instagram berbeda -->
+                <a
+                  href="https://www.instagram.com/amanahcomputer.bdg/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-[#38BDF8]/10 hover:bg-[#38BDF8]/20 text-slate-100 border border-[#38BDF8]/35 hover:border-[#38BDF8] text-sm font-semibold transition-colors"
+                >
+                  <svg class="w-4 h-4 text-[#38BDF8] shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                  </svg>
+                  <span>Instagram (@amanahcomputer.bdg)</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Kartu Kontak WhatsApp 085795151998 -->
+            <div class="lg:col-span-5 rounded-2xl bg-[#0A1222] border border-slate-800 p-6 flex flex-col justify-between space-y-5">
+              <div class="space-y-2">
+                <span class="text-xs font-semibold uppercase tracking-wider text-[#38BDF8]">Kontak WhatsApp</span>
+                <h3 class="text-xl font-extrabold text-white">085795151998</h3>
+                <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                  Hubungi WhatsApp resmi AMANAH COMPUTER untuk konsultasi layanan, penjadwalan kunjungan ke toko, atau koordinasi COD area Bandung.
+                </p>
+              </div>
+
+              <div class="space-y-2.5">
+                <a
+                  href="https://wa.me/6285795151998"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="w-full inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-[#2563EB] hover:bg-blue-500 text-white text-sm font-bold shadow-md shadow-blue-600/20 transition-all"
+                >
+                  <span>Chat ke WhatsApp 085795151998</span>
+                </a>
+
+                <button
+                  type="button"
+                  id="copy-wa-btn"
+                  onclick="copyWhatsAppNumber()"
+                  class="w-full py-2.5 px-4 rounded-xl bg-[#0E182D] hover:bg-slate-800 border border-slate-700 text-xs font-semibold text-slate-200 transition-colors"
+                >
+                  Salin Nomor WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== 6. FOOTER ==================== -->
+  <footer class="bg-[#060B16] border-t border-slate-800/80 py-8">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+      <div class="flex items-center justify-center sm:justify-start gap-3">
+        <div class="w-9 h-9 rounded-xl logo-frame border border-slate-800 overflow-hidden shrink-0">
+          <img
+            class="ac-brand-logo"
+            src=""
+            alt="Logo AMANAH COMPUTER"
+          />
+        </div>
+        <div>
+          <span class="text-sm font-extrabold text-white tracking-tight">
+            AMANAH <span class="text-[#38BDF8]">COMPUTER</span>
+          </span>
+          <p class="text-xs text-slate-400">
+            Istana BEC Lantai 1 Blok W-12, Bandung • WA: 085795151998
+          </p>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap items-center justify-center sm:justify-end gap-4 text-xs">
+        <a
+          href="https://wa.me/6285795151998"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-slate-300 hover:text-[#38BDF8] font-medium transition-colors"
+        >
+          WhatsApp: 085795151998
+        </a>
+        <!-- Ganti 'amanahcomputer.bdg' pada href dan teks tampilan di bawah jika username Instagram berbeda -->
+        <a
+          href="https://www.instagram.com/amanahcomputer.bdg/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-slate-300 hover:text-[#38BDF8] font-medium transition-colors"
+        >
+          Instagram: @amanahcomputer.bdg
+        </a>
+        <a
+          href="https://maps.app.goo.gl/PCabt8RW2VkDqCqTA?g_st=ac"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-[#38BDF8] hover:underline font-medium"
+        >
+          Google Maps
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Render monogram logam A di atas C menjadi data URI JPEG yang bersih untuk seluruh slot logo
+    (function mountMonogramDataUri() {
+      try {
+        const canvas = document.createElement('canvas');
+        canvas.width = 256;
+        canvas.height = 256;
+        const ctx = canvas.getContext('2d');
+        if (!ctx) return;
+
+        // Latar gelap pekat agar menyatu dengan bingkai gelap dan aksen biru teknologi
+        ctx.fillStyle = '#050811';
+        ctx.fillRect(0, 0, 256, 256);
+
+        // Gradasi logam perak brushed untuk huruf A di atas C
+        const metalGrad = ctx.createLinearGradient(56, 28, 200, 228);
+        metalGrad.addColorStop(0, '#F1F5F9');
+        metalGrad.addColorStop(0.5, '#94A3B8');
+        metalGrad.addColorStop(1, '#CBD5E1');
+
+        ctx.fillStyle = metalGrad;
+
+        // Huruf C besar di bagian bawah
+        ctx.beginPath();
+        ctx.arc(128, 148, 66, 0.24 * Math.PI, 1.78 * Math.PI, false);
+        ctx.arc(128, 148, 42, 1.78 * Math.PI, 0.24 * Math.PI, true);
+        ctx.closePath();
+        ctx.fill();
+
+        // Potongan celah halus di bagian atas C untuk memisahkan huruf A
+        ctx.fillStyle = '#050811';
+        ctx.beginPath();
+        ctx.moveTo(92, 62);
+        ctx.lineTo(136, 98);
+        ctx.lineTo(86, 108);
+        ctx.closePath();
+        ctx.fill();
+
+        // Huruf A tajam di bagian atas
+        ctx.fillStyle = metalGrad;
+        ctx.beginPath();
+        ctx.moveTo(128, 28);
+        ctx.lineTo(186, 134);
+        ctx.lineTo(156, 134);
+        ctx.lineTo(128, 80);
+        ctx.lineTo(104, 124);
+        ctx.lineTo(88, 109);
+        ctx.closePath();
+        ctx.fill();
+
+        // Palang horizontal pada huruf A
+        ctx.fillRect(108, 108, 42, 14);
+
+        const jpegDataUri = canvas.toDataURL('image/jpeg', 0.92);
+        document.querySelectorAll('img.ac-brand-logo').forEach((img) => {
+          img.src = jpegDataUri;
+        });
+      } catch (err) {
+        // Biarkan bingkai tetap tampil rapi jika canvas tidak tersedia
+      }
+    })();
+
+    // Interaksi menu navigasi untuk layar kecil
+    const menuTrigger = document.getElementById('mobile-menu-trigger');
+    const menuPanel = document.getElementById('mobile-menu-panel');
+    const hamburgerIcon = document.getElementById('icon-hamburger');
+    const closeIcon = document.getElementById('icon-close');
+
+    if (menuTrigger && menuPanel && hamburgerIcon && closeIcon) {
+      menuTrigger.addEventListener('click', () => {
+        const expanded = menuTrigger.getAttribute('aria-expanded') === 'true';
+        menuTrigger.setAttribute('aria-expanded', String(!expanded));
+        menuPanel.classList.toggle('hidden');
+        hamburgerIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
+      });
+
+      document.querySelectorAll('.mobile-nav-item').forEach((item) => {
+        item.addEventListener('click', () => {
+          menuTrigger.setAttribute('aria-expanded', 'false');
+          menuPanel.classList.add('hidden');
+          hamburgerIcon.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+        });
+      });
+    }
+
+    // Salin nomor WhatsApp tanpa dialog bawaan browser
+    function copyWhatsAppNumber() {
+      const btn = document.getElementById('copy-wa-btn');
+      const numberText = '085795151998';
+      try {
+        const helper = document.createElement('textarea');
+        helper.value = numberText;
+        helper.setAttribute('readonly', '');
+        helper.style.position = 'fixed';
+        helper.style.left = '-9999px';
+        document.body.appendChild(helper);
+        helper.select();
+        document.execCommand('copy');
+        document.body.removeChild(helper);
+        if (btn) {
+          btn.textContent = 'Nomor Tersalin (085795151998)';
+          setTimeout(() => {
+            btn.textContent = 'Salin Nomor WhatsApp';
+          }, 1800);
+        }
+      } catch (err) {
+        if (btn) btn.textContent = 'Gagal menyalin';
+      }
+    }
+  </script>
+</body>
+</html>ody>
+</html> </script>
+</body>
+</html>
